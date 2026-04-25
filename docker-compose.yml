@@ -1,0 +1,10 @@
+services:
+  dashboard:
+    build: .
+    ports:
+      - "8050:8050"
+    volumes:
+      - ./DADOS_DASHBOARD_CONSOLIDADO.xlsx:/app/DADOS_DASHBOARD_CONSOLIDADO.xlsx:ro
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1

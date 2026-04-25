@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8050
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8050", "--workers", "2", "--timeout", "120", "dashboard:app.server"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8050", "--workers", "2", "--timeout", "120", "dashboard:app"]
